@@ -7,15 +7,18 @@ phases:
       java: corretto11
   build:
     commands:
-      - ./gradlew bootJar
+
+      - echo Entered the build phase...
+      - mvn install
+
   post_build:
     commands:
       - echo Build completed
 artifacts:
   files:
-    - build/libs/*.jar
+
+    - target/*.jar
     - scripts/*.sh
     - appspec.yml
-  #com/mycompany/app/HelloWorld.java, specifying yes will place this file in /HelloWorld.java
   discard-paths: yes
 
