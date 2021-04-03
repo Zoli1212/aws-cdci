@@ -1,25 +1,21 @@
+
 version: 0.2
 
 phases:
   install:
     runtime-versions:
       java: corretto11
-
   build:
     commands:
-      - echo Entered the build phase...
-      - mvn clean install
+      - ./gradlew bootJar
   post_build:
     commands:
-      - echo Build completed successfully
+      - echo Build completed
 artifacts:
   files:
+    - build/libs/*.jar
     - scripts/*.sh
     - appspec.yml
-<<<<<<< HEAD
-    - target/aws-deploy-demo-0.0.1-SNAPSHOT.jar
+  #com/mycompany/app/HelloWorld.java, specifying yes will place this file in /HelloWorld.java
   discard-paths: yes
-=======
-    - target/*.jar
-  discard-paths: yes
->>>>>>> 093bd03de1b04566f1cf4babffce845a9286d127
+
