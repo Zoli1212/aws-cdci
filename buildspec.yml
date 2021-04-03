@@ -16,5 +16,5 @@ artifacts:
   files:
     - scripts/*.sh
     - appspec.yml
-    - target/*.jar
+    - target/aws-deploy-demo-0.0.1-SNAPSHOT.jar
   discard-paths: yes
