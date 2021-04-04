@@ -7,7 +7,6 @@ phases:
       java: corretto11
   build:
     commands:
-
       - echo Entered the build phase...
       - mvn install
 
