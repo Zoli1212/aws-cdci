@@ -15,9 +15,11 @@ phases:
       - echo Build completed
 artifacts:
   files:
-
     - target/*.jar
     - scripts/*.sh
     - appspec.yml
+    - scripts/start_server.sh
+    - scripts/stop_server.sh
+    - scripts/fix_previleges.sh
   discard-paths: yes
 
